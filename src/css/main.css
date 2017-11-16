@@ -1,11 +1,12 @@
 body {
-  padding: 50px;
+  padding: 36px;
   font-family: 'Inconsolata', monospace;
   background-color: #26394c;
  /* font-family: 'Roboto', sans-serif; */
 }
 .jumbotron{
   background-color: #5c90b5;
+  padding: 36px;
 }
 img{
   height:64px;
@@ -14,21 +15,36 @@ img{
 h1 {
   color:white;
 }
+p{
+  color:white;
+  margin:0px;
+}
+#opLine {
+  font-size: 14px;
+  color:#2b0b0b;
+}
+#res{
+  color:#2b0b0b;
+  font-size: 28px;
+}
 #ecran{
   width:260px;
-  height: 48px;
+  height: 72px;
   background-color: #968b8b;
-  color:#2b0b0b;
-  padding:5px;
-  font-size: 28px;
   text-align: right;
+  margin:10px;
+  padding:2px;
+  
+  border: solid 2px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(10, 10, 10, 0.548), 0 10px 20px 0 rgba(0, 0, 0, 0.664);
 }
 
 .col-6 {
   padding:20px;
   max-width: 300px;
   min-width: 300px;
-  border: solid 2px;
+  border: solid 4px;
   border-radius: 10px;
   box-shadow: 0 10px 20px 0 rgba(10, 10, 10, 0.548), 0 10px 20px 0 rgba(0, 0, 0, 0.664);
   background-color: rgb(28, 54, 92);
