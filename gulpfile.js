@@ -46,7 +46,7 @@ gulp.task('js', function () {
 });
 
 
-gulp.task('copy', gulp.series('image', 'html', 'css', 'js'));
+gulp.task('copy', gulp.series('html', 'css', 'js'));
 
 gulp.task('inject', gulp.series('copy', function () {
   var css = gulp.src(paths.tmpCSS);
