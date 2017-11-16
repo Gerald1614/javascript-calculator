@@ -1,4 +1,4 @@
-let operation = "";
+var operation = "";
 
 function afficherResultat(){
   operation=eval(operation).toString();
@@ -7,6 +7,7 @@ function afficherResultat(){
   }
   afficherEcran(operation);
 };
+
 
 function checkEntry(value) {
   if (operation.length<18){
