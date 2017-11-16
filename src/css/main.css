@@ -34,14 +34,13 @@ p{
   text-align: right;
   margin:10px;
   padding:2px;
-  
   border: solid 2px;
   border-radius: 10px;
-  box-shadow: 0 10px 20px 0 rgba(10, 10, 10, 0.548), 0 10px 20px 0 rgba(0, 0, 0, 0.664);
+  box-shadow: 0 5px 10px 0 rgba(22, 22, 22, 0.548), 0 5px 10px 0 rgba(58, 48, 48, 0.664);
 }
 
 .col-6 {
-  padding:20px;
+  padding:12px;
   max-width: 300px;
   min-width: 300px;
   border: solid 4px;

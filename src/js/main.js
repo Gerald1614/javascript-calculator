@@ -3,15 +3,21 @@ var opRes="";
 
 function afficherResultat(){
   if (operation !=""){
-  operation=eval(operation).toFixed(4).toString();
-  if (operation.length >17) {
-    valExcess();
-    operation=0;
-    setTimeout(function() {   
-      operation="";
-      opRes="";
-      afficherEcran(operation, opRes);
-   }, 4000);
+    operation=eval(operation);
+  if (operation %1 !=0 && operation.length>17) {
+    operation=operation.toString();
+  }
+  else if (operation % 1 !=0 && operation.length>16) {
+    operation=operation.toFixed(1).toString();
+  }
+  else if (operation % 1 !=0 && operation.length>15) {
+    operation=operation.toFixed(2).toString();
+  }
+  else if (operation % 1 !=0){
+    operation=operation.toFixed(3).toString();
+  }
+  else if (operation % 1 ==0){
+    operation=operation.toString();
   }
   afficherEcran(operation, opRes);
  
