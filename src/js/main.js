@@ -4,23 +4,17 @@ var opRes="";
 function afficherResultat(){
   if (operation !=""){
     operation=eval(operation);
-  if (operation %1 !=0 && operation.length>17) {
-    operation=operation.toString();
-  }
-  else if (operation % 1 !=0 && operation.length>16) {
-    operation=operation.toFixed(1).toString();
-  }
-  else if (operation % 1 !=0 && operation.length>15) {
-    operation=operation.toFixed(2).toString();
-  }
-  else if (operation % 1 !=0){
+    var test= operation % 1 !==0;
+  if (test && operation.toString().length<14) {
     operation=operation.toFixed(3).toString();
   }
-  else if (operation % 1 ==0){
-    operation=operation.toString();
+  else if (test && operation.toString().length>=14) {
+    operation=operation.toFixed(2).toString();
+  }
+  else if (!test){
+    operation=operation.toFixed(0).toString();
   }
   afficherEcran(operation, opRes);
- 
 }
 };
 
@@ -34,7 +28,7 @@ function valExcess(){
   })
 }
 function checkEntry(value) {
-  if (operation.length<18){
+  if (operation.length<16){
      operation+=value;
      opRes+=value;
   }
@@ -57,7 +51,7 @@ function checkEntry(value) {
 
 function annulerDernier() {
 operation=operation.slice(0,-1);
-opRes=opRes.slice(0,-1);
+opRes=operation;
 afficherEcran(operation, opRes);
 }
 
